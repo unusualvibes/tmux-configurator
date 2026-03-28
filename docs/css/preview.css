@@ -1,0 +1,143 @@
+.preview-shell {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 20px;
+  gap: 16px;
+}
+
+.preview-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--chrome-muted);
+  font-size: 0.82rem;
+}
+
+.terminal {
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.terminal-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.traffic-lights {
+  display: flex;
+  gap: 8px;
+}
+
+.traffic-lights span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.terminal-body {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 14px;
+  padding: 14px;
+  min-height: 420px;
+}
+
+.pane-stack {
+  display: grid;
+  gap: 14px;
+}
+
+.pane {
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 18px;
+  padding: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  min-height: 120px;
+  position: relative;
+}
+
+.pane.is-active::after {
+  content: "active";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.72rem;
+  opacity: 0.8;
+}
+
+.pane-title {
+  margin-bottom: 12px;
+  opacity: 0.78;
+}
+
+.window-strip {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.window-tab {
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.statusbar {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 0;
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.statusbar.is-top {
+  order: -1;
+}
+
+.status-side {
+  display: flex;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.status-side:last-child {
+  margin-left: auto;
+}
+
+.status-segment,
+.status-separator {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 12px;
+}
+
+.status-separator {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.preview-panel--stacked .preview-shell {
+  min-height: 520px;
+}
+
+@media (max-width: 1100px) {
+  .terminal-body {
+    grid-template-columns: 1fr;
+  }
+}

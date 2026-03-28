@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tmux Configurator</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="stylesheet" href="./css/themes.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/preview.css">
+</head>
+<body>
+  <div class="app-shell" id="app">
+    <header class="app-header">
+      <div>
+        <h1>tmux configurator</h1>
+      </div>
+      <div class="header-actions">
+        <button type="button" class="ghost-button" id="chrome-toggle">Toggle chrome</button>
+        <button type="button" class="ghost-button" id="copy-config">Copy</button>
+        <button type="button" class="primary-button" id="download-config">Export</button>
+      </div>
+    </header>
+
+    <section class="mobile-tabs">
+      <input checked type="radio" name="mobile-panel" id="tab-controls">
+      <input type="radio" name="mobile-panel" id="tab-preview">
+      <input type="radio" name="mobile-panel" id="tab-output">
+      <div class="tab-labels" role="tablist" aria-label="Panels">
+        <label for="tab-controls">Controls</label>
+        <label for="tab-preview">Preview</label>
+        <label for="tab-output">Output</label>
+      </div>
+      <div class="app-grid">
+        <aside class="stack-panel" data-panel="controls">
+          <section class="panel preview-panel preview-panel--stacked">
+            <div id="preview-root"></div>
+          </section>
+          <section class="panel controls-panel">
+            <div id="controls-root"></div>
+          </section>
+        </aside>
+        <section class="panel output-panel" data-panel="output">
+          <div id="output-root"></div>
+        </section>
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

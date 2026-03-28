@@ -1,0 +1,28 @@
+:root {
+  --font-display: "Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  --chrome-bg: #f5f0e8;
+  --chrome-panel: rgba(255, 252, 247, 0.84);
+  --chrome-panel-strong: rgba(255, 248, 238, 0.96);
+  --chrome-panel-border: rgba(71, 55, 40, 0.12);
+  --chrome-text: #2a2119;
+  --chrome-muted: #735f4a;
+  --chrome-accent: #c55b3d;
+  --chrome-accent-strong: #a83f25;
+  --chrome-shadow: 0 24px 70px rgba(58, 36, 15, 0.16);
+  --chrome-code-bg: #181818;
+}
+
+body[data-chrome="dark"] {
+  --chrome-bg: #111216;
+  --chrome-panel: rgba(22, 24, 31, 0.86);
+  --chrome-panel-strong: rgba(19, 22, 29, 0.96);
+  --chrome-panel-border: rgba(255, 255, 255, 0.08);
+  --chrome-text: #f1f4f8;
+  --chrome-muted: #9ba8b8;
+  --chrome-accent: #ff8b61;
+  --chrome-accent-strong: #ff6b3d;
+  --chrome-shadow: 0 30px 80px rgba(0, 0, 0, 0.38);
+  --chrome-code-bg: #0a0d12;
+}
