@@ -1,5 +1,7 @@
 # tmux-configurator
 
+Hosted on Github Pages: https://unusualvibes.github.io/tmux-configurator/
+
 `tmux-configurator` is a browser-based editor for generating a `tmux.conf` file without writing the configuration by hand.
 
 It lets you tune the visual layout and behavior of a tmux setup, preview the result in the browser, and export the generated configuration as plain text.
